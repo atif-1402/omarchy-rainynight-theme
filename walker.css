@@ -1,53 +1,43 @@
-@define-color selected-text #d6e7ff;      /* soft light-blue highlight from rainy sky */
-@define-color text #cdd3e1;               /* light grey-blue text like the city lights */
-@define-color base #1e2030;               /* deep night-purple background */
-@define-color border #292b3b;             /* subtle purple-grey border like window frame */
-@define-color foreground #cdd3e1;         /* same as text for consistency */
-@define-color background #13141acc;       /* darker transparency, matching room shadows */
-@define-color hover #8c92a3;              /* muted grey-blue hover like distant buildings */
-@define-color accent #4a79a8;             /* desaturated blue accent from low city glow */
-
-
-window {
-  background: transparent;
-  border-radius: 16px;
-}
-
-window .box-wrapper {
-  background: alpha(@background, 0.89);
-  color: @text;
-  border: 2px solid @border;
-  border-radius: 16px;
-  padding: 8px;
-  margin: 0;
-}
+@define-color selected-text #d6e7ff;   
+@define-color text #cdd3e1;              
+@define-color base #13141acc;               
+@define-color border #292b3b;            
+@define-color foreground #cdd3e1;         
+@define-color background #13141acc;       
+@define-color hover #8c92a3;             
+@define-color selected-box #4a79a8;            
 
 window .search-container,
 window .search {
   background: alpha(@hover, 0.3);
   color: @foreground;
   border: 1px solid alpha(@border, 0.5);
-  border-radius: 12px;
-  padding: 8px 12px;
+  border-radius: 10px;
+  padding: 2px 8px;
   margin-top: 1px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 400;
 }
 
-window child {
-  background: transparent;
+.box-wrapper {
+  border-radius: 18px;
+}
+
+child:selected {
+  border-radius: 10px;
+  background-color: alpha(@selected-box, 0.16);
+  transition: all 0.9s ease-in;
+  transition: background-color 0.22s ease-in;
+}
+
+child:selected .item-box {
+  transition: all 0.09s ease-in;
+  margin-left: 10px;
+}
+
+child:selected .item-box * {
   color: @text;
-  border: none;
-  border-radius: 16px;
-  padding: 4px 2px;
-  transition: all 0.2s ease;
 }
 
-window child:selected,
-window child:focus,
-window child:checked {
-  background: alpha(@hover, 0.1);
-  color: @selected-text;
-  font-weight: 600;
-  transform: translateX(2px);
-}
+
+
