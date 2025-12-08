@@ -6,25 +6,25 @@ return {
         opts = {
             disable_italics = false,
             colors = {
-                -- Monotone shades (base00-base07)
-                base00 = "#0f0f0f", -- Default background (very dark grey)
-                base01 = "#1a1a1a", -- Lighter background (status bars)
-                base02 = "#1f1f1f", -- Selection background
-                base03 = "#3a3a3a", -- Comments, invisibles
-                base04 = "#d0d0d0", -- Dark foreground
-                base05 = "#e6e6e6", -- Default foreground
-                base06 = "#f2f2f2", -- Light foreground
-                base07 = "#ffffff", -- Light background
+                -- Monotone shades 
+                base00 = "#0d0f1a", -- Deep night background
+                base01 = "#161822", -- Slightly lighter (window frame tone)
+                base02 = "#1e2030", -- Selection / subtle contrast
+                base03 = "#2b2d3f", -- Comments / dim text
+                base04 = "#c7cbe0", -- Soft grey-blue foreground
+                base05 = "#d7dbf0", -- Default foreground (city lights reflection)
+                base06 = "#eef1ff", -- Light, desaturated text
+                base07 = "#ffffff", -- Pure white
 
-                -- Accent colors (base08-base0F)
-                base08 = "#d14c4c", -- Soft red (errors)
-                base09 = "#d18f52", -- Soft orange
-                base0A = "#d1c24d", -- Muted yellow
-                base0B = "#7fb77e", -- Muted green
-                base0C = "#86c7c8", -- Muted cyan
-                base0D = "#8a8faf", -- Muted blue
-                base0E = "#b48ead", -- Muted purple
-                base0F = "#c8c088", -- Muted brown/yellow
+                -- Accent colors 
+                base08 = "#d46a6a", -- Soft red lights / building signals
+                base09 = "#d89c66", -- Lamp-like warm orange
+                base0A = "#e0d27d", -- Muted yellow (street reflections)
+                base0B = "#7fa693", -- Desaturated green (books)
+                base0C = "#8ec7d6", -- Cyan light reflections on glass
+                base0D = "#8c92c8", -- Muted purple-blue (rainy sky tone)
+                base0E = "#bba5d6", -- Purple/neon signs
+                base0F = "#c9b88a", -- Soft brownish yellow (warm interior tone)
             },
         },
         config = function(_, opts)
@@ -41,4 +41,6 @@ return {
             colorscheme = "aether",
         },
     },
+}
+
 }
