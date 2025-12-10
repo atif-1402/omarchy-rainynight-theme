@@ -10,7 +10,7 @@ return {
 				base00 = "#0d0f1a", -- Deep night background
 				base01 = "#161822", -- Slightly lighter (window frame tone)
 				base02 = "#1e2030", -- Selection / subtle contrast
-				base03 = "#2b2d3f", -- Comments / dim text
+				base03 = "#555666", -- Comments / dim text
 				base04 = "#c7cbe0", -- Soft grey-blue foreground
 				base05 = "#d7dbf0", -- Default foreground (city lights reflection)
 				base06 = "#eef1ff", -- Light, desaturated text
