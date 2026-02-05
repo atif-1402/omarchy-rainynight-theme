@@ -9,35 +9,38 @@
 
 window .search-container,
 window .search {
-  background: alpha(@hover, 0.3);
+  background: alpha(@base, 0.6);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
   color: @foreground;
-  border: 1px solid alpha(@border, 0.5);
+  border: 1px solid alpha(@border, 1);
   border-radius: 10px;
-  padding: 2px 8px;
+  padding: 3px 16px;
   margin-top: 1px;
   font-size: 10px;
   font-weight: 400;
 }
 
 .box-wrapper {
-  border-radius: 18px;
+  border-radius: 28px;
 }
 
 child:selected {
   border-radius: 10px;
   background-color: alpha(@selected-box, 0.16);
-  transition: all 0.9s ease-in;
-  transition: background-color 0.22s ease-in;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 child:selected .item-box {
-  transition: all 0.09s ease-in;
-  margin-left: 10px;
+  transition: transform 0.14s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(6px);
 }
 
 child:selected .item-box * {
   color: @text;
 }
+
+
 
 
 
